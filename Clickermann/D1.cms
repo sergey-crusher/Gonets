@@ -1,0 +1,33 @@
+#name "d1 v1.0"
+
+$D1_2 = WNDFIND("COMPL#5", 0)
+$SeanceManager = WNDFIND("SeanceManager", 0)
+WNDGETINFO($D1_2, $x, $y, $w, $h)
+
+//Если появилась ошибка
+IF ($SeanceManager > 0)
+   HINTPOPUP("Ошибка ТИ-ОСА")
+   //Пока не исчезнут все ошибки
+   LCLICK($x+210,$y+260)
+   WAIT(3)
+   LCLICK($x+210,$y+260)
+   WAIT(3)
+   LCLICK($x+210,$y+260)
+   WAIT(3)
+   LCLICK($x+210,$y+260)
+   WAIT(3)
+END_IF
+
+GETSCREEN
+//Перезапускаем ТИ-ОСА и вкл. гр. режим
+IF (PXL($x+100,$y+65) = 65535)
+   WAIT(3)
+   LCLICK($x+130,$y+65)
+   WAIT(3)
+   KEYPRESS(#ENTER)
+   WAIT(3)
+   LCLICK($x+100,$y+65)
+   WAIT(3)
+END_IF
+
+WAIT(5)                 

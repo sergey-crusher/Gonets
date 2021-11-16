@@ -1,0 +1,15 @@
+D:\Gonets\TimeSetting_v2\bin\x86\Debug\netcoreapp3.1\TimeSetting_v2.exe
+D:\Gonets\TimeSetting_v2\bin\x86\Debug\netcoreapp3.1\TimeSetting_v2.deps.json
+D:\Gonets\TimeSetting_v2\bin\x86\Debug\netcoreapp3.1\TimeSetting_v2.runtimeconfig.json
+D:\Gonets\TimeSetting_v2\bin\x86\Debug\netcoreapp3.1\TimeSetting_v2.runtimeconfig.dev.json
+D:\Gonets\TimeSetting_v2\bin\x86\Debug\netcoreapp3.1\TimeSetting_v2.dll
+D:\Gonets\TimeSetting_v2\bin\x86\Debug\netcoreapp3.1\TimeSetting_v2.pdb
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.csprojAssemblyReference.cache
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.Form1.resources
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.csproj.GenerateResource.cache
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.AssemblyInfoInputs.cache
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.AssemblyInfo.cs
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.csproj.CoreCompileInputs.cache
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.dll
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.pdb
+D:\Gonets\TimeSetting_v2\obj\x86\Debug\netcoreapp3.1\TimeSetting_v2.genruntimeconfig.cache

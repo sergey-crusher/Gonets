@@ -1,0 +1,132 @@
+#name "Msender v1.1"
+
+$th = $_time_h    // Вводим в текст сообщения 
+$tm = $_time_m
+$ts = $_time_s
+$dd = $_date_d
+$dm = $_date_m
+$dy = $_date_y
+IF(STRLEN($th)<2)
+   $th = STRCONCAT ("0", $th)
+END_IF
+IF(STRLEN($tm)<2)
+   $tm = STRCONCAT ("0", $tm)
+END_IF
+IF(STRLEN($ts)<2)
+   $ts = STRCONCAT ("0", $ts)
+END_IF
+IF(STRLEN($dd)<2)
+   $dd = STRCONCAT ("0", $dd)
+END_IF
+IF(STRLEN($dm)<2)
+   $dm = STRCONCAT ("0", $dm)
+END_IF
+IF(STRLEN($dy)<2)
+   $dy = STRCONCAT ("0", $dy)
+END_IF
+
+$new_file_name=STRCONCAT("log_msender\log_msender_",$th,"_",$tm,"_",$ts,"T",$dd,"_",$dm,"_",$dy,".txt")
+
+step:
+
+IF (TFCOUNT($new_file_name)>1000)
+//IF (TFCOUNT("log_msender.txt")>1000)    
+// Чистим лог при наличии в нем более 1000 строк
+	//TFCLEAR("log_msender.txt", 1)
+	$new_file_name=STRCONCAT("log_msender\log_msender_",$th,"_",$tm,"_",$ts,"T",$dd,"_",$dm,"_",$dy,".txt")
+END_IF  
+
+HINTPOPUP("ЧЕРЕЗ 5 СЕКУНД НАЧНЕТСЯ ОТПРАВКА", "СТАРТ")
+BEEP(800,200)
+WAIT(5)
+
+$HWND = WNDFIND("Менеджер ТЛГ", 0)      // Управление ТЛГ & ШЛ
+WNDSTATE($HWND, 1)
+WNDSIZE($HWND,831,601)
+WNDPOS($HWND,0,0)
+WAITMS(200)
+LCLICK(63,46)
+WAITMS(200)
+LCLICK(265,223)
+WAITMS(200)
+KEYPRESS(#BACKSPACE)
+WAITMS(200)
+KEYPRESS(#9)
+WAITMS(200)
+LCLICK(371,354)
+WAITMS(300)
+
+$th = $_time_h    // Вводим в текст сообщения 
+$tm = $_time_m
+$ts = $_time_s
+$dd = $_date_d
+$dm = $_date_m
+$dy = $_date_y
+IF(STRLEN($th)<2)
+   $th = STRCONCAT ("0", $th)
+END_IF
+IF(STRLEN($tm)<2)
+   $tm = STRCONCAT ("0", $tm)
+END_IF
+IF(STRLEN($ts)<2)
+   $ts = STRCONCAT ("0", $ts)
+END_IF
+IF(STRLEN($dd)<2)
+   $dd = STRCONCAT ("0", $dd)
+END_IF
+IF(STRLEN($dm)<2)
+   $dm = STRCONCAT ("0", $dm)
+END_IF
+IF(STRLEN($dy)<2)
+   $dy = STRCONCAT ("0", $dy)
+END_IF
+
+KEYDOWN(#SHIFT)
+KEYPRESS(#T)
+KEYPRESS(#E)
+KEYPRESS(#S)
+KEYPRESS(#T)
+KEYUP(#SHIFT)
+KEYPRESS(#SPACE)
+KEYSTRING (STRCONCAT($th,"_",$tm,"_",$ts," ",$dd,".",$dm,".",$dy))
+
+
+WAITMS(800)
+LCLICK(561,464)
+WAITMS(200)
+LCLICK(561,464)
+WAITMS(200)
+LCLICK(561,464)
+
+$check = 0
+$i = 0
+WHILE($check = 0)
+   GETSCREEN
+   IF_PICTURE_IN (247,524, 409,545, "inc2.bmp", -1, 80)
+      $check = 1
+			BEEP(800,200)
+			
+			$str_to_file=STRCONCAT($th,":",$tm,":",$ts," ",$dd,".",$dm,".",$dy,"  Сообщение доставлено")	
+			//TFWRITE ("log_msender.txt", $str_to_file)
+			TFWRITE ($new_file_name, $str_to_file)
+
+			HINTPOPUP("Сообщение доставлено! Можете продолжить работу", "ВНИМАНИЕ") 
+      WNDSTATE($HWND, 0)
+			WAIT(1800) //задержка 30 минут перед следующей отправкой
+      goto (step)
+   ELSE
+      WAITMS(50)
+      $i = $i + 1
+   END_IF
+   IF ($i > 900)         // 20 - 1 секунда, но по факту 100 - 20 секунд
+			HINTPOPUP("Сообщение не пришло, РС7 тупит", "ТРЕВОГА ")
+			SOUND("error.wav")
+			
+			$str_to_file=STRCONCAT($th,":",$tm,":",$ts," ",$dd,".",$dm,".",$dy,"  СООБЩЕНИЕ НЕ ДОСТАВЛЕНО")	
+			//TFWRITE ("log_msender.txt", $str_to_file)
+			TFWRITE ($new_file_name, $str_to_file)
+			$check = 1
+			WAIT(1800) //задержка 30 минут перед следующей отправкой
+      goto (step)
+		END_IF
+END_CYC

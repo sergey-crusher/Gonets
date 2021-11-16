@@ -1,0 +1,10 @@
+D:\Gonets\plan\plan\bin\Debug\plan.exe.config
+D:\Gonets\plan\plan\bin\Debug\plan.exe
+D:\Gonets\plan\plan\bin\Debug\plan.pdb
+D:\Gonets\plan\plan\obj\Debug\plan.csprojAssemblyReference.cache
+D:\Gonets\plan\plan\obj\Debug\plan.Form1.resources
+D:\Gonets\plan\plan\obj\Debug\plan.Properties.Resources.resources
+D:\Gonets\plan\plan\obj\Debug\plan.csproj.GenerateResource.cache
+D:\Gonets\plan\plan\obj\Debug\plan.csproj.CoreCompileInputs.cache
+D:\Gonets\plan\plan\obj\Debug\plan.exe
+D:\Gonets\plan\plan\obj\Debug\plan.pdb
