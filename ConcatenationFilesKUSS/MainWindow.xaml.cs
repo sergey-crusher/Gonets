@@ -79,7 +79,7 @@ namespace ConcatenationFilesKUSS
             {
                 foreach (var file in files)
                 {
-                    using (var srcStream = File.OpenRead(file)) srcStream.CopyTo(destStream);
+                    using (var srcStream = File.Open(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)) srcStream.CopyTo(destStream);
                 }
             }
 
@@ -151,6 +151,10 @@ namespace ConcatenationFilesKUSS
                     end_shift++;
                     end_str = end.AddDays(end_shift).ToString("yyyy_MM_dd");
                 }
+            }
+            if (end_file == null)
+            {
+                end_file = files.Last();
             }
 
             if (start_shift >= 9)
