@@ -1,0 +1,16 @@
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\bin\Debug\ConcatenationFilesKUSS.exe.config
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\bin\Debug\ConcatenationFilesKUSS.exe
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\bin\Debug\ConcatenationFilesKUSS.pdb
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.csproj.AssemblyReference.cache
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.csproj.SuggestedBindingRedirects.cache
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\MainWindow.g.cs
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\App.g.cs
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS_MarkupCompile.cache
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS_MarkupCompile.lref
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\MainWindow.baml
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.g.resources
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.Properties.Resources.resources
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.csproj.GenerateResource.cache
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.csproj.CoreCompileInputs.cache
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.exe
+D:\CyberTrading\Gonets\ConcatenationFilesKUSS\obj\Debug\ConcatenationFilesKUSS.pdb
